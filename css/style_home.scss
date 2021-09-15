@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@200;300;400;500;600;700&display=swap");
+
+$base-color: #b2cacb;
+$btn-color: #c9ffec;
+$border-color: #ededed17;
+$btn-bg-color: #001819;
+$element-spacing: 20px;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Space Grotesk";
+  color: $base-color;
+}
+
+body {
+  background: rgb(4, 34, 47);
+  background: radial-gradient(circle, rgba(4, 34, 47, 1) 0%, rgba(20, 27, 30, 1) 100%);
+}
+
+.container {
+  margin: 20px auto;
+  max-width: 1600px;
+}
+
+// Header
+
+header nav {
+  display: flex;
+  z-index: 1;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 20px;
+
+  // ____
+
+  img {
+    width: 75px;
+    position: relative;
+    top: -8px;
+  }
+
+  div {
+    background-color: $base-color;
+    margin: 10px;
+    width: 25px;
+    height: 1px;
+  }
+}
+
+// Hero Section
+section.hero div {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin-top: 70px;
+  padding: 10px;
+
+  // _____
+
+  h1 {
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: clamp(1.6rem, 4vw, 3.5rem);
+
+    span {
+      display: block;
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    padding: 13px 34px;
+    background-color: $btn-bg-color;
+    width: fit-content;
+    border-radius: 50px;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    font-weight: 300;
+    color: $btn-color;
+
+    img {
+      width: 25px;
+      margin-right: 10px;
+    }
+  }
+
+  p {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    font-weight: 200;
+  }
+}
+
+section.cards {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .card {
+    padding: 10px;
+    font-weight: 200;
+    width: clamp(320px, 95vw, 600px);
+  }
+
+  .card-content {
+    border: 1px solid $border-color;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      font-size: 0.8rem;
+
+      span {
+        color: #1cf6ff;
+      }
+    }
+  }
+
+  .card-content_left {
+    display: flex;
+    align-items: center;
+
+    // Pulsing
+
+    .dot {
+      height: 7px;
+      width: 7px;
+      border-radius: 50%;
+      margin: 0 12px 0 8px;
+    }
+
+    .pulse {
+      background: #15ff81;
+      box-shadow: 0 0 0 0 rgb(106, 255, 193);
+      animation: pulse-green 2s infinite;
+    }
+
+    @keyframes pulse-green {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(51, 217, 178, 0.7);
+      }
+
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 8px rgba(51, 217, 178, 0);
+      }
+
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(51, 217, 178, 0);
+      }
+      // Pusling stop
+    }
+  }
+
+  .inactive {
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background-color: gray;
+    margin: 0 12px 0 8px;
+    box-shadow: 0 0 0 5px rgba(54, 56, 56, 0.445);
+  }
+
+  .card-content.bottom {
+    padding: 30px;
+    height: 200px;
+    position: relative;
+    justify-content: space-between;
+    position: relative;
+
+    p {
+      &:nth-child(1) {
+        font-size: clamp(2rem, 5vw, 3rem);
+      }
+    }
+
+    a {
+      color: $btn-color;
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      display: flex;
+      font-size: 0.8rem;
+      background-color: $btn-bg-color;
+      padding: 6px 12px;
+      border-radius: 50px;
+
+      img {
+        margin-left: 5px;
+      }
+    }
+  }
+  .all-launches {
+    color: $btn-color;
+    display: flex;
+    align-self: center;
+    margin-top: 50px;
+    font-weight: 200;
+  }
+
+  a {
+    img {
+      margin-left: 5px;
+    }
+  }
+}
+
+.hero .video {
+  display: none;
+}
+
+// Pad resolution
+
+// Desktop res
+@media (min-width: 1024px) {
+  .hero .video {
+    display: flex;
+    width: clamp(250px, 20vw, 350px);
+  }
+
+  section.hero {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+
+    div {
+      &:nth-child(1) {
+        position: relative;
+        top: 120px;
+      }
+
+      h1 {
+        text-align: left;
+        span {
+          font-weight: 600;
+          font-size: clamp(3rem, 5vw, 5rem);
+        }
+      }
+      a,
+      p {
+        align-self: flex-start;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  section.cards {
+    .dot,
+    .inactive {
+      display: none;
+    }
+  }
+}
