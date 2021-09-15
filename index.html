@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Space-X</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style_home.css" />
   </head>
   <body>
     <div class="container">
@@ -20,10 +20,21 @@
       </header>
 
       <!-- Upper page text -->
-      <section class="hero">
-        <h1>Explore Space Technology. <span>Wonders of the Universe</span></h1>
-        <a href="#"><img src="./img/star.svg" alt="star symbol" />Explore</a>
-        <p>Join 10,000 other explorers.</p>
+      <section class="hero pad desktop">
+        <div>
+          <h1>Explore Space Technology. <span>Wonders of the Universe.</span></h1>
+          <a href="#"><img src="./img/star.svg" alt="star symbol" />Explore</a>
+          <p>Join 10,000 other explorers.</p>
+        </div>
+        <div>
+          <video
+            autoplay
+            muted
+            loop
+            class="video"
+            src="./video/pexels-cottonbro-7169782.mp4"
+          ></video>
+        </div>
       </section>
 
       <!-- Launch cards -->
@@ -51,6 +62,32 @@
             ></a>
           </div>
         </div>
+        <!-- Launch cards -->
+
+        <div class="card">
+          <!-- Table row upper -->
+          <div class="card-content upper">
+            <div class="card-content_left">
+              <div class="inactive"></div>
+              <p>Previous launch<span class="card-content_countdown"></span></p>
+            </div>
+            <div class="card-content_right">
+              <p>18.11.20</p>
+            </div>
+          </div>
+
+          <!-- Table row bottom -->
+          <div class="card-content bottom">
+            <div class="card-content_mission">
+              <p class="mission-name">RTA-13</p>
+              <p class="mission-quest">Mission to go beyond.</p>
+            </div>
+            <a class="current previous" href="#">Re-watch</a>
+          </div>
+        </div>
+        <a href="#" class="all-launches"
+          >View all launches <img src="./img/arrow-right.svg" alt=""
+        /></a>
       </section>
     </div>
   </body>
