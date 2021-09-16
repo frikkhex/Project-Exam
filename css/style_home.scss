@@ -26,6 +26,10 @@ body {
   max-width: 1600px;
 }
 
+// Decorative img
+.design-figures {
+  display: none;
+}
 // Header
 
 header nav {
@@ -223,6 +227,73 @@ section.cards {
 
 // Desktop res
 @media (min-width: 1024px) {
+  .design-figures {
+    display: flex;
+    position: relative;
+    img {
+      overflow: hidden;
+      z-index: -1;
+      position: absolute;
+      opacity: 1;
+
+      &:nth-child(1) {
+        right: -500px;
+        top: 500px;
+        opacity: 0.2;
+      }
+
+      &:nth-child(2) {
+        right: 50%;
+        top: 570px;
+        animation: floating 15s infinite;
+        animation-direction: alternate;
+      }
+
+      @keyframes floating {
+        0% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(-200px, 30px);
+        }
+        100% {
+          transform: translate(100px, 130px);
+        }
+      }
+
+      &:nth-child(3) {
+        right: 0;
+        top: 270px;
+        animation: floatingX 10s infinite;
+        animation-direction: alternate;
+      }
+
+      @keyframes floatingX {
+        0% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(-200px, 300px);
+        }
+        100% {
+          transform: translate(100px, 130px);
+        }
+      }
+
+      &:nth-child(4) {
+        top: -250px;
+        right: -200px;
+        opacity: 0.2;
+      }
+      &:nth-child(5) {
+        position: absolute;
+        left: -200px;
+        opacity: 0.2;
+        top: 100px;
+      }
+    }
+  }
+
   .hero .video {
     display: flex;
     width: clamp(300px, 20vw, 350px);

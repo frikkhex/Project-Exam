@@ -20,6 +20,10 @@ body {
   max-width: 1600px;
 }
 
+.design-figures {
+  display: none;
+}
+
 header nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -270,6 +274,106 @@ section.cards a img {
 }
 
 @media (min-width: 1024px) {
+  .design-figures {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+  }
+  .design-figures img {
+    overflow: hidden;
+    z-index: -1;
+    position: absolute;
+    opacity: 1;
+  }
+  .design-figures img:nth-child(1) {
+    right: -500px;
+    top: 500px;
+    opacity: 0.2;
+  }
+  .design-figures img:nth-child(2) {
+    right: 50%;
+    top: 570px;
+    -webkit-animation: floating 15s infinite;
+            animation: floating 15s infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+  }
+  @-webkit-keyframes floating {
+    0% {
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
+    }
+    50% {
+      -webkit-transform: translate(-200px, 30px);
+              transform: translate(-200px, 30px);
+    }
+    100% {
+      -webkit-transform: translate(100px, 130px);
+              transform: translate(100px, 130px);
+    }
+  }
+  @keyframes floating {
+    0% {
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
+    }
+    50% {
+      -webkit-transform: translate(-200px, 30px);
+              transform: translate(-200px, 30px);
+    }
+    100% {
+      -webkit-transform: translate(100px, 130px);
+              transform: translate(100px, 130px);
+    }
+  }
+  .design-figures img:nth-child(3) {
+    right: 0;
+    top: 270px;
+    -webkit-animation: floatingX 10s infinite;
+            animation: floatingX 10s infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+  }
+  @-webkit-keyframes floatingX {
+    0% {
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
+    }
+    50% {
+      -webkit-transform: translate(-200px, 300px);
+              transform: translate(-200px, 300px);
+    }
+    100% {
+      -webkit-transform: translate(100px, 130px);
+              transform: translate(100px, 130px);
+    }
+  }
+  @keyframes floatingX {
+    0% {
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
+    }
+    50% {
+      -webkit-transform: translate(-200px, 300px);
+              transform: translate(-200px, 300px);
+    }
+    100% {
+      -webkit-transform: translate(100px, 130px);
+              transform: translate(100px, 130px);
+    }
+  }
+  .design-figures img:nth-child(4) {
+    top: -250px;
+    right: -200px;
+    opacity: 0.2;
+  }
+  .design-figures img:nth-child(5) {
+    position: absolute;
+    left: -200px;
+    opacity: 0.2;
+    top: 100px;
+  }
   .hero .video {
     display: -webkit-box;
     display: -ms-flexbox;
