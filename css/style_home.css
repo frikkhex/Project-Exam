@@ -412,21 +412,22 @@ section.cards a img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     position: relative;
   }
   section.cards .card {
     position: relative;
     width: 40%;
-    padding: 0;
+    margin: 0px 30px;
   }
   section.cards .line-seperator {
-    position: absolute;
-    top: 12px;
+    position: inherit;
+    top: 23px;
     background-color: #b2cacb;
     height: 700px;
     width: 1px;
@@ -447,8 +448,8 @@ section.cards a img {
   }
   section.cards .line-seperator .dot-seperator .upper {
     position: absolute;
-    height: 15px;
-    width: 15px;
+    height: 12px;
+    width: 12px;
     border-radius: 50%;
   }
   section.cards .line-seperator .dot-seperator .pulse {
@@ -468,8 +469,8 @@ section.cards a img {
     70% {
       -webkit-transform: scale(1);
               transform: scale(1);
-      -webkit-box-shadow: 0 0 0 8px rgba(51, 217, 178, 0);
-              box-shadow: 0 0 0 8px rgba(51, 217, 178, 0);
+      -webkit-box-shadow: 0 0 0 12px rgba(51, 217, 178, 0);
+              box-shadow: 0 0 0 12px rgba(51, 217, 178, 0);
     }
     100% {
       -webkit-transform: scale(0.95);
@@ -488,8 +489,8 @@ section.cards a img {
     70% {
       -webkit-transform: scale(1);
               transform: scale(1);
-      -webkit-box-shadow: 0 0 0 8px rgba(51, 217, 178, 0);
-              box-shadow: 0 0 0 8px rgba(51, 217, 178, 0);
+      -webkit-box-shadow: 0 0 0 12px rgba(51, 217, 178, 0);
+              box-shadow: 0 0 0 12px rgba(51, 217, 178, 0);
     }
     100% {
       -webkit-transform: scale(0.95);
@@ -501,8 +502,8 @@ section.cards a img {
   section.cards .line-seperator .lower {
     position: absolute;
     bottom: 55%;
-    height: 15px;
-    width: 15px;
+    height: 12px;
+    width: 12px;
     border-radius: 50%;
     background-color: gray;
     -webkit-box-shadow: 0 0 0 5px rgba(54, 56, 56, 0.445);
@@ -513,8 +514,7 @@ section.cards a img {
     display: none;
   }
   section.cards .card:nth-child(3) {
-    position: relative;
-    top: 300px;
+    margin-top: 303px;
   }
 }
 
@@ -526,5 +526,13 @@ section.cards a img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid red;
+  text-align: center;
 }
 /*# sourceMappingURL=style_home.css.map */

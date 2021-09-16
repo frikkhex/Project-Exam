@@ -326,19 +326,19 @@ section.cards {
   section.cards {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: baseline;
+    justify-content: center;
+    align-items: flex-start;
     position: relative;
 
     .card {
       position: relative;
       width: 40%;
-      padding: 0;
+      margin: 0px 30px;
     }
 
     .line-seperator {
-      position: absolute;
-      top: 12px;
+      position: inherit;
+      top: 23px;
       background-color: $base-color;
       height: 700px;
       width: 1px;
@@ -349,8 +349,8 @@ section.cards {
         justify-content: center;
         .upper {
           position: absolute;
-          height: 15px;
-          width: 15px;
+          height: 12px;
+          width: 12px;
           border-radius: 50%;
         }
         .pulse {
@@ -367,7 +367,7 @@ section.cards {
 
           70% {
             transform: scale(1);
-            box-shadow: 0 0 0 8px rgba(51, 217, 178, 0);
+            box-shadow: 0 0 0 12px rgba(51, 217, 178, 0);
           }
 
           100% {
@@ -380,8 +380,8 @@ section.cards {
       .lower {
         position: absolute;
         bottom: 55%;
-        height: 15px;
-        width: 15px;
+        height: 12px;
+        width: 12px;
         border-radius: 50%;
         background-color: gray;
         box-shadow: 0 0 0 5px rgba(54, 56, 56, 0.445);
@@ -393,8 +393,7 @@ section.cards {
       display: none;
     }
     & .card:nth-child(3) {
-      position: relative;
-      top: 300px;
+      margin-top: 303px;
     }
   }
 }
@@ -402,4 +401,8 @@ section.cards {
 .footer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  text-align: center;
 }
