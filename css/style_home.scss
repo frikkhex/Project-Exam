@@ -29,6 +29,12 @@ body {
 // Decorative img
 .design-figures {
   display: none;
+  img {
+    &:nth-child(5) {
+      display: flex;
+      position: relative;
+    }
+  }
 }
 // Header
 
