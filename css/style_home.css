@@ -16,8 +16,12 @@ body {
 }
 
 .container {
-  margin: 20px auto;
+  margin: 0 auto;
   max-width: 1600px;
+}
+
+.design-figures {
+  display: none;
 }
 
 header nav {
@@ -269,7 +273,155 @@ section.cards a img {
   display: none;
 }
 
+section.cta {
+  text-align: center;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.cta a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+  background-color: #001819;
+  color: #c9ffec;
+  border-radius: 50px;
+}
+
+section.cta a img {
+  margin-left: 15px;
+}
+
+footer {
+  margin: 100px 0 0;
+  padding: clamp(50px, 5vw, 80px);
+  background-color: #c9ffec;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer div {
+  color: #001819;
+  max-width: 1600px;
+}
+
 @media (min-width: 1024px) {
+  .design-figures {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+  }
+  .design-figures img {
+    overflow: hidden;
+    z-index: -1;
+    position: absolute;
+    opacity: 1;
+  }
+  .design-figures img:nth-child(1) {
+    right: -500px;
+    top: 500px;
+    opacity: 0.2;
+  }
+  .design-figures img:nth-child(2) {
+    right: 50%;
+    top: 570px;
+    -webkit-animation: floating 15s infinite;
+            animation: floating 15s infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+  }
+  @-webkit-keyframes floating {
+    0% {
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
+    }
+    50% {
+      -webkit-transform: translate(-200px, 30px);
+              transform: translate(-200px, 30px);
+    }
+    100% {
+      -webkit-transform: translate(100px, 130px);
+              transform: translate(100px, 130px);
+    }
+  }
+  @keyframes floating {
+    0% {
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
+    }
+    50% {
+      -webkit-transform: translate(-200px, 30px);
+              transform: translate(-200px, 30px);
+    }
+    100% {
+      -webkit-transform: translate(100px, 130px);
+              transform: translate(100px, 130px);
+    }
+  }
+  .design-figures img:nth-child(3) {
+    right: 0;
+    top: 270px;
+    -webkit-animation: floatingX 10s infinite;
+            animation: floatingX 10s infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+  }
+  @-webkit-keyframes floatingX {
+    0% {
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
+    }
+    50% {
+      -webkit-transform: translate(-200px, 300px);
+              transform: translate(-200px, 300px);
+    }
+    100% {
+      -webkit-transform: translate(100px, 130px);
+              transform: translate(100px, 130px);
+    }
+  }
+  @keyframes floatingX {
+    0% {
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
+    }
+    50% {
+      -webkit-transform: translate(-200px, 300px);
+              transform: translate(-200px, 300px);
+    }
+    100% {
+      -webkit-transform: translate(100px, 130px);
+              transform: translate(100px, 130px);
+    }
+  }
+  .design-figures img:nth-child(4) {
+    top: -250px;
+    right: -200px;
+    opacity: 0.2;
+  }
+  .design-figures img:nth-child(5) {
+    position: absolute;
+    left: -200px;
+    opacity: 0.2;
+    top: 100px;
+  }
   .hero .video {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -308,23 +460,24 @@ section.cards a img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     position: relative;
   }
   section.cards .card {
     position: relative;
     width: 40%;
-    padding: 0;
+    margin: 0px 30px;
   }
   section.cards .line-seperator {
-    position: absolute;
-    top: 12px;
+    position: inherit;
+    top: 23px;
     background-color: #b2cacb;
-    height: 700px;
+    height: 620px;
     width: 1px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -343,8 +496,8 @@ section.cards a img {
   }
   section.cards .line-seperator .dot-seperator .upper {
     position: absolute;
-    height: 15px;
-    width: 15px;
+    height: 12px;
+    width: 12px;
     border-radius: 50%;
   }
   section.cards .line-seperator .dot-seperator .pulse {
@@ -364,8 +517,8 @@ section.cards a img {
     70% {
       -webkit-transform: scale(1);
               transform: scale(1);
-      -webkit-box-shadow: 0 0 0 8px rgba(51, 217, 178, 0);
-              box-shadow: 0 0 0 8px rgba(51, 217, 178, 0);
+      -webkit-box-shadow: 0 0 0 12px rgba(51, 217, 178, 0);
+              box-shadow: 0 0 0 12px rgba(51, 217, 178, 0);
     }
     100% {
       -webkit-transform: scale(0.95);
@@ -384,8 +537,8 @@ section.cards a img {
     70% {
       -webkit-transform: scale(1);
               transform: scale(1);
-      -webkit-box-shadow: 0 0 0 8px rgba(51, 217, 178, 0);
-              box-shadow: 0 0 0 8px rgba(51, 217, 178, 0);
+      -webkit-box-shadow: 0 0 0 12px rgba(51, 217, 178, 0);
+              box-shadow: 0 0 0 12px rgba(51, 217, 178, 0);
     }
     100% {
       -webkit-transform: scale(0.95);
@@ -396,9 +549,9 @@ section.cards a img {
   }
   section.cards .line-seperator .lower {
     position: absolute;
-    bottom: 55%;
-    height: 15px;
-    width: 15px;
+    bottom: 50%;
+    height: 12px;
+    width: 12px;
     border-radius: 50%;
     background-color: gray;
     -webkit-box-shadow: 0 0 0 5px rgba(54, 56, 56, 0.445);
@@ -409,18 +562,7 @@ section.cards a img {
     display: none;
   }
   section.cards .card:nth-child(3) {
-    position: relative;
-    top: 300px;
+    margin-top: 300px;
   }
-}
-
-.footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 /*# sourceMappingURL=style_home.css.map */
