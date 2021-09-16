@@ -225,13 +225,13 @@ section.cards {
 @media (min-width: 1024px) {
   .hero .video {
     display: flex;
-    width: clamp(250px, 20vw, 350px);
+    width: clamp(300px, 20vw, 350px);
   }
 
   section.hero {
     display: flex;
     justify-content: space-around;
-    padding: 50px;
+    padding: 60px;
 
     div {
       &:nth-child(1) {
@@ -240,11 +240,8 @@ section.cards {
       }
 
       h1 {
+        margin-right: 20px;
         text-align: left;
-        span {
-          font-weight: 600;
-          font-size: clamp(3rem, 5vw, 5rem);
-        }
       }
       a,
       p {
@@ -256,9 +253,82 @@ section.cards {
 
 @media (min-width: 1200px) {
   section.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    position: relative;
+
+    .card {
+      position: relative;
+      width: 40%;
+      padding: 0;
+    }
+
+    .line-seperator {
+      position: absolute;
+      top: 12px;
+      background-color: $base-color;
+      height: 700px;
+      width: 1px;
+      display: flex;
+      justify-content: center;
+      .dot-seperator {
+        display: flex;
+        justify-content: center;
+        .upper {
+          position: absolute;
+          height: 15px;
+          width: 15px;
+          border-radius: 50%;
+        }
+        .pulse {
+          background: #15ff81;
+          box-shadow: 0 0 0 0 rgb(106, 255, 193);
+          animation: pulse-green 2s infinite;
+        }
+
+        @keyframes pulse-green {
+          0% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(51, 217, 178, 0.7);
+          }
+
+          70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 8px rgba(51, 217, 178, 0);
+          }
+
+          100% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(51, 217, 178, 0);
+          }
+          // Pusling stop
+        }
+      }
+      .lower {
+        position: absolute;
+        bottom: 55%;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background-color: gray;
+        box-shadow: 0 0 0 5px rgba(54, 56, 56, 0.445);
+      }
+    }
+
     .dot,
     .inactive {
       display: none;
     }
+    & .card:nth-child(3) {
+      position: relative;
+      top: 300px;
+    }
   }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
 }
