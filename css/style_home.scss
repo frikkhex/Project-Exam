@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  margin: 20px auto;
+  margin: 0 auto;
   max-width: 1600px;
 }
 
@@ -223,6 +223,42 @@ section.cards {
   display: none;
 }
 
+section.cta {
+  text-align: center;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    display: flex;
+    align-items: center;
+
+    padding: 10px 20px;
+    background-color: $btn-bg-color;
+    color: $btn-color;
+    border-radius: 50px;
+
+    img {
+      margin-left: 15px;
+    }
+  }
+}
+
+footer {
+  margin: 100px 0 0;
+  padding: clamp(50px, 5vw, 80px);
+  background-color: $btn-color;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  div {
+    color: $btn-bg-color;
+    max-width: 1600px;
+  }
+}
+
 // Pad resolution
 
 // Desktop res
@@ -340,7 +376,7 @@ section.cards {
       position: inherit;
       top: 23px;
       background-color: $base-color;
-      height: 700px;
+      height: 620px;
       width: 1px;
       display: flex;
       justify-content: center;
@@ -379,7 +415,7 @@ section.cards {
       }
       .lower {
         position: absolute;
-        bottom: 55%;
+        bottom: 50%;
         height: 12px;
         width: 12px;
         border-radius: 50%;
@@ -393,16 +429,7 @@ section.cards {
       display: none;
     }
     & .card:nth-child(3) {
-      margin-top: 303px;
+      margin-top: 300px;
     }
   }
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid red;
-  text-align: center;
 }

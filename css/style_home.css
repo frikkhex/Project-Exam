@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  margin: 20px auto;
+  margin: 0 auto;
   max-width: 1600px;
 }
 
@@ -273,6 +273,54 @@ section.cards a img {
   display: none;
 }
 
+section.cta {
+  text-align: center;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.cta a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+  background-color: #001819;
+  color: #c9ffec;
+  border-radius: 50px;
+}
+
+section.cta a img {
+  margin-left: 15px;
+}
+
+footer {
+  margin: 100px 0 0;
+  padding: clamp(50px, 5vw, 80px);
+  background-color: #c9ffec;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer div {
+  color: #001819;
+  max-width: 1600px;
+}
+
 @media (min-width: 1024px) {
   .design-figures {
     display: -webkit-box;
@@ -429,7 +477,7 @@ section.cards a img {
     position: inherit;
     top: 23px;
     background-color: #b2cacb;
-    height: 700px;
+    height: 620px;
     width: 1px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -501,7 +549,7 @@ section.cards a img {
   }
   section.cards .line-seperator .lower {
     position: absolute;
-    bottom: 55%;
+    bottom: 50%;
     height: 12px;
     width: 12px;
     border-radius: 50%;
@@ -514,25 +562,7 @@ section.cards a img {
     display: none;
   }
   section.cards .card:nth-child(3) {
-    margin-top: 303px;
+    margin-top: 300px;
   }
-}
-
-.footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 1px solid red;
-  text-align: center;
 }
 /*# sourceMappingURL=style_home.css.map */
