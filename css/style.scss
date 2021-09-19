@@ -28,6 +28,22 @@ body {
   max-width: 1600px;
 }
 
+.breadcrumbs-steps {
+  padding: 20px;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  margin: 0 0 40px;
+  a {
+    &:nth-child(1) {
+      opacity: 0.5;
+    }
+  }
+  img {
+    margin: 0 10px;
+  }
+}
+
 // Decorative img
 .design-figures {
   display: none;
@@ -60,6 +76,40 @@ header nav {
     margin: 10px;
     width: 25px;
     height: 1px;
+  }
+}
+
+section.intro-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 200;
+  h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+  p {
+    font-size: clamp(1rem, 4vw, 2rem);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  a {
+    display: flex;
+    background-color: $btn-bg-color;
+    padding: 5px 20px;
+    color: $btn-color;
+    margin: 5px;
+    border-radius: 50px;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    align-items: center;
+    img {
+      position: relative;
+      left: 5px;
+    }
+    &:hover {
+      border: 1px solid $btn-color;
+      margin: 4px;
+      background: rgba(0, 0, 0, 0);
+    }
   }
 }
 
@@ -228,10 +278,15 @@ section.cards {
       }
     }
   }
+
+  #launch-name {
+    color: #1cf6ff;
+  }
+
   .card-content.launch-info {
     display: flex;
     flex-direction: column;
-    height: 500px;
+    height: fit-content;
     img {
       width: 200px;
       height: auto;
@@ -239,15 +294,34 @@ section.cards {
     }
     p {
       font-size: 1rem;
+      margin: 0;
+      position: relative;
+      font-weight: 200;
+      font-size: 1rem;
     }
+    span {
+      position: relative;
+      right: 5px;
+      background-color: rgba(8, 65, 65, 0.527);
+      padding: 5px 10px;
+      font-size: 0.8rem;
+      display: block;
+      width: fit-content;
+      color: $btn-color;
+      margin: 20px 0 8px;
+      border-radius: 50px;
+    }
+
+    hr {
+      opacity: 0.2;
+      margin: 0 0 20px;
+    }
+
     a {
       position: absolute;
+      margin: 0;
       right: 20px;
       bottom: 20px;
-      img {
-        margin-left: 3px;
-        align-self: center;
-      }
     }
   }
 
@@ -313,13 +387,14 @@ section.cta {
     }
     &:hover {
       border: 1px solid $btn-color;
+      margin: -1px;
       background-color: rgba($color: #000000, $alpha: 0);
     }
   }
 }
 
 footer {
-  margin: 100px 0 0;
+  margin-top: 80px;
   padding: clamp(50px, 5vw, 80px);
   background-color: $btn-color;
   width: 100%;
