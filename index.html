@@ -27,7 +27,7 @@
       </header>
 
       <!-- Upper page text -->
-      <section class="hero pad desktop">
+      <section class="hero">
         <div>
           <h1>Explore Space Technology. <span>Wonders of the Universe.</span></h1>
           <a href="#"><img src="./img/star.svg" alt="star symbol" />Explore</a>
@@ -54,17 +54,18 @@
               <p>Upcoming launch in <span class="card-content_countdown">15:10:21</span></p>
             </div>
             <div class="card-content_right">
-              <p>11.10.21</p>
+              <p id="launch-date">11.10.21</p>
             </div>
           </div>
 
           <!-- Table row bottom -->
           <div class="card-content bottom">
             <div class="card-content_mission">
-              <p class="mission-name">CRS-23</p>
-              <p class="mission-quest">Mission to go beyond.</p>
+              <a href="#"
+                ><div class="mission-name upcoming"><span class="skeleton-loader"></span></div
+              ></a>
             </div>
-            <a class="current previous" href="#"
+            <a class="current" href="#"
               >Get notifed <span><img src="./img/bell.svg" alt="" /></span
             ></a>
           </div>
@@ -90,10 +91,11 @@
           <!-- Table row bottom -->
           <div class="card-content bottom">
             <div class="card-content_mission">
-              <p class="mission-name">RTA-13</p>
-              <p class="mission-quest">Mission to go beyond.</p>
+              <a href="#"
+                ><div class="mission-name previous"><span class="skeleton-loader"></span></div
+              ></a>
             </div>
-            <a class="current previous" href="#">Re-watch</a>
+            <a class="previous" href="#">Re-watch</a>
           </div>
         </div>
       </section>
@@ -105,5 +107,6 @@
       <div>Socials</div>
       <div>Contact</div>
     </footer>
+    <script src="./js/index.js"></script>
   </body>
 </html>
