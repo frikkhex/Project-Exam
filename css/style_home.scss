@@ -6,7 +6,9 @@ $border-color: #ededed17;
 $btn-bg-color: #001819;
 $element-spacing: 20px;
 
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -188,40 +190,77 @@ section.cards {
     justify-content: space-between;
     position: relative;
 
-    p {
-      &:nth-child(1) {
-        font-size: clamp(2rem, 5vw, 2.5rem);
-      }
-    }
-
-    a {
-      color: $btn-color;
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
+    div {
       display: flex;
-      font-size: 0.8rem;
-      background-color: $btn-bg-color;
-      padding: 6px 12px;
-      border-radius: 50px;
+      margin-left: 10px;
+      .skeleton-loader {
+        width: 250px;
+        border-radius: 50px;
+        height: 45px;
+        display: block;
 
-      img {
-        margin-left: 5px;
+        background: linear-gradient(
+            to right,
+            rgb(4, 34, 47),
+            rgb(4, 43, 59) 50%,
+            rgb(4, 34, 47) 100%
+          ),
+          rgb(4, 34, 47);
+        background-repeat: repeat-y;
+        background-size: 50px 500px;
+        background-position: 0 0;
+        animation: shine 1s infinite;
+      }
+
+      @keyframes shine {
+        to {
+          background-position: 100% 0;
+        }
+      }
+
+      &:nth-child(1) {
+        font-size: clamp(2rem, 5vw, 3rem);
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
-  .all-launches {
-    color: $btn-color;
-    display: flex;
-    align-self: center;
-    margin-top: 50px;
-    font-weight: 200;
-  }
 
-  a {
+  a.current,
+  a.previous {
+    color: $btn-color;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    font-size: 0.8rem;
+    background-color: $btn-bg-color;
+    padding: 6px 12px;
+    border-radius: 50px;
+
     img {
       margin-left: 5px;
     }
+
+    &:hover {
+      border: 1px solid $btn-color;
+      background-color: rgba($color: #000000, $alpha: 0);
+    }
+  }
+}
+
+.all-launches {
+  color: $btn-color;
+  display: flex;
+  align-self: center;
+  margin-top: 50px;
+  font-weight: 200;
+}
+
+a.previous {
+  img {
+    margin-left: 5px;
   }
 }
 
@@ -247,6 +286,10 @@ section.cta {
 
     img {
       margin-left: 15px;
+    }
+    &:hover {
+      border: 1px solid $btn-color;
+      background-color: rgba($color: #000000, $alpha: 0);
     }
   }
 }

@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@200;300;400;500;600;700&display=swap");
-* {
+*,
+*::after,
+*::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
@@ -239,11 +241,49 @@ section.cards .card-content.bottom {
   position: relative;
 }
 
-section.cards .card-content.bottom p:nth-child(1) {
-  font-size: clamp(2rem, 5vw, 2.5rem);
+section.cards .card-content.bottom div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 10px;
 }
 
-section.cards .card-content.bottom a {
+section.cards .card-content.bottom div .skeleton-loader {
+  width: 250px;
+  border-radius: 50px;
+  height: 45px;
+  display: block;
+  background: -webkit-gradient(linear, left top, right top, from(#04222f), color-stop(50%, #042b3b), to(#04222f)), #04222f;
+  background: linear-gradient(to right, #04222f, #042b3b 50%, #04222f 100%), #04222f;
+  background-repeat: repeat-y;
+  background-size: 50px 500px;
+  background-position: 0 0;
+  -webkit-animation: shine 1s infinite;
+          animation: shine 1s infinite;
+}
+
+@-webkit-keyframes shine {
+  to {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position: 100% 0;
+  }
+}
+
+section.cards .card-content.bottom div:nth-child(1) {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+section.cards .card-content.bottom div:nth-child(1):hover {
+  text-decoration: underline;
+}
+
+section.cards a.current,
+section.cards a.previous {
   color: #c9ffec;
   position: absolute;
   bottom: 15px;
@@ -257,11 +297,18 @@ section.cards .card-content.bottom a {
   border-radius: 50px;
 }
 
-section.cards .card-content.bottom a img {
+section.cards a.current img,
+section.cards a.previous img {
   margin-left: 5px;
 }
 
-section.cards .all-launches {
+section.cards a.current:hover,
+section.cards a.previous:hover {
+  border: 1px solid #c9ffec;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.all-launches {
   color: #c9ffec;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -272,7 +319,7 @@ section.cards .all-launches {
   font-weight: 200;
 }
 
-section.cards a img {
+a.previous img {
   margin-left: 5px;
 }
 
@@ -309,6 +356,11 @@ section.cta a {
 
 section.cta a img {
   margin-left: 15px;
+}
+
+section.cta a:hover {
+  border: 1px solid #c9ffec;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 footer {
