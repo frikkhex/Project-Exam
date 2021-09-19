@@ -19,19 +19,24 @@
       <header>
         <nav>
           <a href="./index.html"><img src="./img/logo.png" alt="Logo" /></a>
-          <a href="#">
-            <div class="menu upper"></div>
-            <div class="menu lower"></div>
-          </a>
+          <div id="menu">
+            <a href="./index.html">Home</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./launches.html">Upcoming launch</a>
+            <a href="./archive.html">Archive</a>
+          </div>
         </nav>
       </header>
 
       <!-- Upper page text -->
       <section class="hero">
-        <div>
+        <div class="introduction">
           <h1>Explore Space Technology. <span>Wonders of the Universe.</span></h1>
-          <a href="#"><img src="./img/star.svg" alt="star symbol" />Explore</a>
-          <p>Join 10,000 other explorers.</p>
+          <p>
+            Since the first successful Falcon 1 launch in 2008, SpaceX have been making history with
+            their rocket technology.
+          </p>
+          <a href="./launches.html"><img src="./img/star.svg" alt="star symbol" />Explore</a>
         </div>
         <div>
           <video
@@ -67,12 +72,12 @@
           <!-- Table row bottom -->
           <div class="card-content bottom">
             <div class="card-content_mission">
-              <a href="#"
+              <a href="./launches.html"
                 ><div class="mission-name upcoming">
                   <span class="skeleton-loader"></span></div
               ></a>
             </div>
-            <a class="current" href="#"
+            <a class="current" href="./contact.html"
               >Get notifed <span><img src="./img/bell.svg" alt="" /></span
             ></a>
           </div>
@@ -98,12 +103,12 @@
           <!-- Table row bottom -->
           <div class="card-content bottom">
             <div class="card-content_mission">
-              <a href="#"
+              <a href="./archive.html"
                 ><div class="mission-name previous">
                   <span class="skeleton-loader"></span></div
               ></a>
             </div>
-            <a class="previous" href="#">Re-watch</a>
+            <a class="previous" href="./archive.html">Re-watch</a>
           </div>
         </div>
       </section>
@@ -112,8 +117,11 @@
       </section>
     </div>
     <footer>
-      <div>Socials</div>
-      <div>Contact</div>
+      <div>
+        <a href="www.facebook.com"><img src="./img/facebook.svg" alt="facebook icon" /></a>
+        <a href="www.instagram.com"><img src="./img/instagram.svg" alt="facebook icon" /></a>
+      </div>
+      <a href="./contact.html">Contact us</a>
     </footer>
     <script src="./js/index.js"></script>
   </body>

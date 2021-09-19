@@ -17,7 +17,7 @@ const previousLaunches = async () => {
       const launchStatus = latestFirst[i].success;
       const details = latestFirst[i].details;
 
-      if (i === 10) {
+      if (i === 50) {
         break;
       }
 
