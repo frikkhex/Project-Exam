@@ -44,23 +44,6 @@ body {
   }
 }
 
-.toggler {
-  display: flex;
-  justify-content: s;
-  button {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.274);
-    padding: 5px 10px;
-    border-radius: 50px;
-    outline: none;
-    border: none;
-    margin: 8px;
-  }
-}
-
 // Decorative img
 .design-figures {
   display: none;
