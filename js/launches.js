@@ -10,8 +10,8 @@ const launchListData = async () => {
     for (let i = 0; i < launchData.length; i++) {
       const launchName = launchData[i].name;
       const launchDate = launchData[i].date_local.substring(0, 10);
-      const launchCrew = launchData[i].crew;
-      const launchFlightNumber = launchData[i].flight_number;
+      const launchCrew = launchData[i].crew.length;
+      //   const launchFlightNumber = launchData[i].flight_number;
       const missionInfo = launchData[i].details;
       const launchPatch = launchData[i].links.patch.small;
 
@@ -22,14 +22,25 @@ const launchListData = async () => {
         launchPatchImg = `<img src="${launchPatch}" alt="mission patch">`;
       }
 
+      let launchCrewMembers = "";
+      if (!launchCrew) {
+        launchCrewMembers = "No info available.";
+      } else {
+        launchCrewMembers = `${launchCrew} crew members on this planned launch.`;
+      }
+
       upcomingLaunchInfo.innerHTML += `
       <div class="card-content upper">
         <p>${launchName}</p>
         <p>${launchDate}</p>
       </div>
-      <div class="card-content bottom">
-      ${launchPatchImg}
-      <p>${launchFlightNumber}</p>
+      <div class="card-content bottom launch-info">
+
+            ${launchPatchImg}
+            <p>Mission info: ${missionInfo}</p
+            <p>Crew members: ${launchCrewMembers}</p>
+            <a id="launch-info_read" href="./details">Read more<img src=".img/eye.svg"></a>
+
       </div>
       `;
     }

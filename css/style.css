@@ -283,6 +283,42 @@ section.cards .card-content.bottom div:nth-child(1):hover {
   text-decoration: underline;
 }
 
+section.cards .card-content.launch-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 500px;
+}
+
+section.cards .card-content.launch-info img {
+  width: 200px;
+  height: auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+section.cards .card-content.launch-info p {
+  font-size: 1rem;
+}
+
+section.cards .card-content.launch-info a {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+section.cards .card-content.launch-info a img {
+  margin-left: 3px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 section.cards a.current,
 section.cards a.previous {
   color: #c9ffec;
