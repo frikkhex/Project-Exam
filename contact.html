@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <a href="./index.html"><img src="./img/logo.png" alt="Logo" /></a>
+          <div id="menu">
+            <a href="./index.html">Home</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./launches.html">Upcoming launch</a>
+            <a href="./archive.html">Archive</a>
+          </div>
+        </nav>
+      </header>
+      <section class="breadcrumbs">
+        <div class="breadcrumbs-steps">
+          <a id="breadcrumb-steps_first" href="./index.html">Home</a>
+          <img src="./img/chevron.svg" />
+          <a id="bredcrumb-steps_current" href="./launches.html">Contact us</a>
+        </div>
+      </section>
+      <main class="form-container">
+        <div class="formValidation">
+          <p>Fantastic, all inputs are valid!<span class="fas fa-check"></span></p>
+        </div>
+        <p>Contact us for more information</p>
+        <div class="formValidation">
+          <h2>Great, everything is good</h2>
+        </div>
+        <form action="" class="contact-form" id="contactForm">
+          <div class="form-section">
+            <label>
+              <span>Full name</span>
+              <input name="fullName" id="fullName" placeholder="What's your name?" />
+            </label>
+            <div class="form-error" id="fullNameError">Please enter your full name</div>
+          </div>
+
+          <div class="form-section">
+            <label>
+              <span>Subject (a minimum of 10 characters)</span>
+              <textarea
+                name="subject"
+                id="subject"
+                rows="10"
+                placeholder="Please tell us what's going on"
+              ></textarea>
+            </label>
+            <div class="form-error" id="subjectError">Please write at least 10 characters</div>
+          </div>
+
+          <div class="form-section">
+            <label>
+              <span>Email (required)</span>
+              <input name="email" id="email" placeholder="Where can we reach you?" />
+            </label>
+            <div class="form-error" id="emailError">Please enter your email</div>
+          </div>
+
+          <div class="form-section">
+            <label>
+              <span>Address (must be at least 25 characters)</span>
+              <input name="address" id="address" placeholder="Where do you live?" />
+            </label>
+            <div class="form-error" id="addressError">
+              Please enter a valid address (more than 25 characters)
+            </div>
+            <button>Submit</button>
+          </div>
+        </form>
+      </main>
+    </div>
+    <footer>
+      <div>
+        <a href="www.facebook.com"><img src="./img/facebook.svg" alt="facebook icon" /></a>
+        <a href="www.instagram.com"><img src="./img/instagram.svg" alt="facebook icon" /></a>
+      </div>
+      <a href="./contact.html">Contact us</a>
+    </footer>
+    <script src="./js/contact.js"></script>
+  </body>
+</html>
